@@ -1,0 +1,193 @@
+@charset "UTF-8";
+
+@-ms-keyframes wiggle{0%{-ms-transform:rotate(8deg);}50%{-ms-transform:rotate(-8deg);}100%{-ms-transform:rotate(8deg);}}
+@-moz-keyframes wiggle{0%{-moz-transform:rotate(8deg);}50%{-moz-transform:rotate(-8deg);}100%{-moz-transform:rotate(8deg);}}
+@-webkit-keyframes wiggle{0%{-webkit-transform:rotate(8deg);}50%{-webkit-transform:rotate(-8deg);}100%{-webkit-transform:rotate(8deg);}}
+@keyframes wiggle{0%{transform:rotate(8deg);}50%{transform:rotate(-8deg);}100%{transform:rotate(8deg);}}
+
+body {
+  background-color: #edf0f1;
+  padding: 100px 0 0 0;
+}
+
+body, input, button {
+  font-family: 'Roboto', sans-serif;
+}
+
+header {
+  width:100%;
+  height: 80px;
+  position: fixed;
+  padding: 15px;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  background-color: #25b99a;
+  box-shadow: 0px 2px 4px rgb(44, 62, 80, 0.15);
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+header input {
+  width: 90%;
+  height: 50px;
+  float: left;
+  background:rgba(255,255,255,0.2);
+  color: #fff;
+  font-size: 15px;
+  font-weight: 400;
+  text-indent: 20px;
+  padding: 0 60px 0 0;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+  border: 0;
+  box-shadow: none;
+  outline: none;
+
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none
+}
+
+header input::-webkit-input-placeholder {
+  color: rgba(250,250,250,0.75);
+}
+header input::-moz-input-placeholder {
+  color: rgba(250,250,250,0.75);
+}
+header input::-ms-input-placeholder {
+  color: rgba(250,250,250,0.75);
+}
+
+header button {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 15px;
+  right: 50px;
+  z-index: 2;
+  border-radius: 25px;
+  background: #fff;
+  box-shadow: none;
+  border: 0;
+  cursor: pointer;
+
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none
+}
+
+button img {
+  height: 16px;
+  width: 16px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -8px 0 0 -8px;
+}
+/*button img svg .fill {
+  background-color: #25b99a;
+}*/
+
+.container {
+  width: 80%;
+  float: left;
+  padding: 15px;
+}
+
+ul#todo {
+  width: 80%;
+  float: left;
+}
+
+ul#todo li {
+  width: 80%;
+  min-height: 50px;
+  float: left;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0px 1px 2px rgb(44, 62, 80, 0.15);
+  list-style: none;
+  margin: 0 0 15px 0;
+  position: relative;
+  padding: 4px 100px 4px 4px;
+  font-size: 18px;
+  font-weight: 500;
+  color: #444;
+  line-height: 40px;
+}
+
+ul#todo li:last-of-type {
+  margin:0;
+}
+
+ul#todo li .buttons {
+  width: 100px;
+  height: 50px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+ul#todo li .buttons button {
+  height: 50px;
+  width: 50px;
+  float: left;
+  background: none;
+  border: 0;
+  box-shadow: none;
+  outline: none;
+  position: relative;
+
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none
+}
+
+ul#todo li .buttons button:last-of-type:before {
+  content: '';
+  width: 1px;
+  height: 30px;
+  position: absolute;
+  top: 14px;
+  left: 0;
+  background: #edf0f1;
+}
+
+ul#todo li .buttons button img {
+  height: 28px;
+  width: 28px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -11px 0 0 -11px;
+  cursor: pointer;
+}
+
+ul#todo li .buttons button img:hover {
+  -ms-animation:wiggle .4s 2;-moz-animation:wiggle .4s 2;-webkit-animation:wiggle .4s 2;animation:wiggle .4s 2;
+}
+
+
+ul#todo li .buttons button.complete svg {
+  width: 30px;
+  height: 30px;
+  border-radius: 30px;
+  border: 1.5px solid #25b99a;
+}
+
+ul#todo li .buttons button.complete-todone svg {
+  width: 30px;
+  height: 30px;
+  border-radius: 30px;
+  border: 1.5px solid #25b99a;
+  background-color: #0EF2BD;
+}
